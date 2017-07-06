@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@我的简历1744255246</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="js/fontsize.js"></script>
+    <link rel="stylesheet" href="css/mouncss.css">
+</head>
+<body>
+<div id="container">
+	<!--音乐按钮图标-->
+				<div class="music">
+					<span class="music_btn">
+						
+					</span>
+					<audio src="music/bgmusic.mp3" id="music" autoplay="autoplay"></audio>
+				</div>
+
+    <div id="page1" class="page">
+        <div class="box">
+			<h1>个人简历</h1>
+			<h2>Personal Resume</h2>
+			<h3>R2112班</h3>
+			<h3>张爱华</h3>
+        </div>
+    </div>
+    <div id="page2" class="page pageDown">
+        <div class="box hide">
+            <p>我的信息</p>
+            <p>本人作品</p>
+            <p>人生自传</p>
+            <p>学习职能</p>
+            <img src="images/z2_5.png">
+            <img src="images/z2_6.png">
+            <img src="images/z2_7.png">
+            <img src="images/z2_8.png">
+            <img src="images/z2_9.png">
+            <img src="images/z2_10.png">
+            <img src="images/z2_11.png">
+        </div>
+    </div>
+    <div id="page3" class="page pageDown">
+        <div class="box hide">
+            <h1>我的信息</h1>
+            <ul>
+            	<li>姓名：张爱华</li>
+            	<li>性别：男</li>
+            	<li>年龄：19周岁</li>
+            	<li>爱好：听歌、看电影、学习</li>
+            	<li>专业：web前端</li>
+            </ul>
+            <img src="images/z3_3.png" >
+        </div>
+    </div>
+    <div id="page4" class="page pageDown">
+        <div class="box hide">
+            <img src="images/p4h.jpg" >
+            <img src="images/z4_2.png" >
+            <img src="images/z1.jpg" >
+            <img src="images/z2.jpg" >
+            <img src="images/z3.jpg" >
+            <img src="images/z4.jpg" >
+            <img src="images/z5.jpg" >
+            <img src="images/z6.jpg" >
+        </div>
+    </div>
+    <div id="page5" class="page pageDown">
+        <div class="box hide">
+            <ul>
+            	<h2>个人自传</h2>
+            	<li> 我是来自唐山市丰润区，我性格热情开朗，好相处，比较谦虚。</li>
+            	<li>做事认真负责，能吃苦耐劳，尽职尽责，有耐心。具有亲和力，</li>
+            	<li>平易近人，善于与人沟通。活泼开朗、乐观向上、兴趣广泛、适应力强、自学力较强、</li>
+            	<li>勤奋好学、脚踏实地、认真负责、坚毅不拔、吃苦耐劳、勇于迎接新挑战 ！</li>
+				<li>我的底线就是我的家人！</li>
+				<li>我是一个喜欢被动的人，不喜欢主动！</li>
+				
+            </ul>
+        </div>
+    </div>
+    <div id="page6" class="page pageDown">
+        <div class="box hide">
+            <h2>学习职能</h2>
+            <img src="images/bt.png"/>
+            <img src="images/css3.jpg"/>
+            <img src="images/dw.png"/>
+            <img src="images/h5.jpg"/>
+            <img src="images/js.jpg"/>
+            <img src="images/ps.png"/>
+        </div>
+    </div>
+</div>
+<script src="js/touch-0.2.14.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>
+    var count = $(".page").length;
+    var index = 0;
+//    $("body").on("touchmove touchstart", function (e) {
+//        e.preventDefault();
+//    })
+    touch.on("#container", "swipeup", function (e) {
+        var page = $(e.target).closest(".page");
+        index =$(".page").index(page);
+        if (index < (count-1)) {
+            page.addClass("pageUp").next(".page").removeClass("pageDown");
+            page.find(".box").addClass("hide");
+            page.next(".page").find(".hide").removeClass("hide")
+        }
+    })
+    touch.on("#container", "swipedown", function (e) {
+        var page = $(e.target).closest(".page");
+        index =$(".page").index(page);
+        if (index > 0) {
+            page.addClass("pageDown").prev(".page").removeClass("pageUp");
+            page.find(".box").addClass("hide");
+            page.prev(".page").find(".hide").removeClass("hide")
+        }
+    })
+
+
+
+	var music_bg=$("#music").get(0);
+				
+				touch.on('.music_btn','tap',function(){
+						//if判断条件语句
+						//如果音乐暂停，点击播放
+					if(music_bg.paused){
+						music_bg.play();
+						$(this).css({animation:"music 2s linear infinite"})
+					}	//如果音乐暂停，点击播放
+					else{
+						music_bg.pause();
+						$(this).css({animation:"none"})
+					}
+					
+				})
+
+</script>
+</body>
+</html>

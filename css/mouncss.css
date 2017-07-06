@@ -1,0 +1,433 @@
+html,body,a,p,div,ul{
+    margin: 0;
+    padding: 0;
+}
+html,body,#container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 300ms linear;/*滑动动画效果*/
+}
+
+.page img {
+    position: absolute;
+    opacity: 0;
+}
+.pageUp {
+    transform: translateY(-100%);
+}
+
+.pageDown {
+    transform: translateY(100%);
+}
+
+.hide {
+    display: none;
+}
+
+/*========音乐按钮样式===========*/
+.music_btn{
+	width: 0.5rem;
+	height: 0.5rem;
+	background: url(../images/music.png) center center no-repeat;
+	position: fixed;
+	top: 0.2rem;
+	right: 0.2rem;
+	animation: music 2s linear infinite;
+	z-index: 1000;
+	border-radius: 1rem;
+}
+@keyframes music{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+
+
+#page1{
+    background: url("../images/3.jpg")center no-repeat;
+    background-size: cover;
+}
+
+#page1 div h1{
+	font-family: "微软雅黑";
+   	color: #FFFF00;
+   	font-size: 0.8rem;
+   	margin-top: 1rem;
+   	margin-left: 1.5rem;
+    animation: rotate 1s linear forwards;
+}
+#page1 div h2{
+    font-family: "微软雅黑";
+   	color: #00FFFF;
+   	font-size: 0.4rem;
+   	margin-top: -0.5rem;
+   	margin-left: 1.5rem;
+   	opacity: 0.8;
+    animation: lefta 1s linear normal;
+}
+#page1 div h3{
+    font-family: "微软雅黑";
+   	color: #00FF00;
+   	font-size: 0.4rem;
+   	animation: roin 1s linear normal;
+   	position: absolute;
+   	right: 0.8rem;
+   	bottom: 1.5rem;
+   	opacity: 0.7;
+}
+@keyframes roin{
+	from{
+		transform: rotate(360deg);
+		opacity: 0;
+	}
+	to{
+		transform: rotate(0deg);
+		opacity: 0.7;
+	}
+}
+
+
+
+#page1 div h3:nth-of-type(2){
+	position: absolute;
+   	right: 1rem;
+   	bottom: 1rem;
+}
+
+#page2{
+    background: url("../images/6.jpg")center no-repeat;
+    background-size: cover; 
+}
+#page2 div p{
+	font-size: 0.5rem;
+	color: #f3f3f3;
+	opacity: 0;
+}
+#page2 div p:first-child{
+	margin-top: 0.7rem;
+	margin-left: 2.3rem;
+    animation: FlashA 1.5s linear forwards;
+}
+#page2 div p:nth-child(2){
+	margin-top: 1rem;
+	margin-left: 1.5rem;
+    animation: FlashA 1.5s 1s linear forwards;
+}
+#page2 div p:nth-child(3){
+	margin-top: 0.9rem;
+	margin-left: 2.3rem;
+    animation: FlashA 1.5s 2s linear forwards;
+}
+#page2 div p:nth-child(4){
+	margin-top: 0.7rem;
+	margin-left: 1.5rem;
+    animation: FlashA 1.5s 3s linear forwards;
+}
+#page2 div img:nth-child(5){
+    width: 6.4rem;
+    height: .68rem;
+    top:.65rem;
+    animation: aniOp 2s 4.5s linear forwards;
+}
+#page2 div img:nth-child(6){
+    width: 6.4rem;
+    height: .68rem;
+    top:2.2rem;
+    animation: aniOp 2s 4.9s linear forwards;
+}
+#page2 div img:nth-child(7){
+    width: 6.4rem;
+    height: .68rem;
+    top:3.6rem;
+    animation: aniOp 2s 5.1s linear forwards;
+ }
+#page2 div img:nth-child(8){
+    width: 6.4rem;
+    height: .68rem;
+    top:.65rem;
+    top:4.9rem;
+    animation: aniOp 2s 5.2s linear forwards;
+}
+#page2 div img:nth-child(9){
+    width: 6.4rem;
+    height:1.56rem;
+    top:.95rem;
+    animation: left 1.5s 5.5s linear forwards;
+}
+#page2 div img:nth-child(10){
+    width: 6.4rem;
+    height: 1.53rem;
+    top:2.5rem;
+    animation: left 1.5s 5.8s linear forwards;
+}
+#page2 div img:nth-child(11){
+    width: 6.4rem;
+    height: 1.31rem;
+    top:3.96rem;
+    animation: left 1.5s 6s linear forwards;
+}
+
+
+
+
+#page3{
+    background: url("../images/2.jpg")center no-repeat;
+    background-size: cover;
+}
+#page3 div h1{
+	margin-top: 1rem;
+   	font-size: 0.7rem;
+   	color: #5CD38B;
+    animation: xzin 2s linear forwards;
+}
+@keyframes xzin{
+	from{
+		transform: rotate(360deg) scale(0);
+		opacity: 0;
+	}
+	to{
+		transform: rotate(0deg) scale(1);
+		opacity: 1;
+	}
+}
+#page3 div ul li:nth-of-type(2),#page3 div ul li:nth-of-type(4){
+	color: #FF00FF;
+}
+#page3 div ul li{
+   	font-size: 0.5rem;
+   	margin-top: 0.3rem;
+   	color: #33CCFF ;
+    animation: lefta 2s linear normal;
+}
+
+#page4{
+    background: url("../images/5.jpg")center no-repeat;
+    background-size: cover;
+}
+#page4 div img:first-child{
+    height: 3.62rem;
+    width: 9.4rem;
+    animation: aniOp 2s linear forwards;
+}
+#page4 div img:nth-child(2){
+    height: 3.62rem;
+    width: 6.4rem;
+    animation: aniOp 2s linear forwards;
+}
+#page4 div img:nth-child(3){
+    height: 2.49rem;
+    width: 2.95rem;
+    top:3.8rem;
+    left: 0.17rem;
+    animation: FlashB 2s linear forwards;
+}
+#page4 div img:nth-child(4){
+    width: 2.99rem;
+    height: 2.48rem;
+    right: 0.15rem;
+    top:3.8rem;
+    animation: FlashC 2s linear forwards;
+}
+#page4 div img:nth-child(5){
+    width: 2.93rem;
+    height: 1.94rem;
+    left: 0.17rem;
+    bottom: 3.5rem;
+    animation: FlashB 2s linear forwards;
+}
+#page4 div img:nth-child(6){
+    width: 2.98rem;
+    height: 1.94rem;
+    right: 0.15rem;
+    bottom: 3.5rem;
+    animation: FlashC 2s linear forwards;
+}
+#page4 div img:nth-child(7){
+    width: 2.92rem;
+    height: 2.09rem;
+    left: 0.17rem;
+    bottom: .65rem;
+    animation: FlashB 2s linear forwards;
+}
+#page4 div img:nth-child(8){
+    width: 3rem;
+    height: 2.1rem;
+    right: 0.15rem;
+    bottom: .65rem;
+    animation: FlashC 2s linear forwards;
+}
+
+
+
+
+
+
+#page5{
+    background: url("../images/1.jpg")center no-repeat;
+    background-size: cover;
+}
+#page5 div h2{
+   	font-size: 1rem;
+   	color: #8EE021;
+    animation: aniOp 3s linear forwards;
+}
+#page5 div ul li{
+	font-size: 0.4rem;
+	color: #CC66CC;
+	text-indent: 0.5rem;
+	list-style: none;
+	animation: lefta 2s linear normal;
+}
+#page5 div ul li:nth-of-type(2),
+#page5 div ul li:nth-of-type(4),
+#page5 div ul li:nth-of-type(6){
+	animation: righta 2s linear normal;
+}
+
+
+
+
+
+#page6{
+    background: url("../images/4.jpg")center no-repeat;
+    background-size: cover;
+}
+#page6 div h2{
+   	font-size: 1rem;
+   	color: #05E5E5;
+   	opacity: 0.7;
+   	margin-left: 0.5rem;
+   	animation: rotate 1s linear forwards;
+}
+#page6 div img{
+	width: 2rem;
+	height: 2rem;
+	opacity: 0.7;
+	position: relative;
+	margin-left: 0.5rem;
+	border-radius: 0.1rem;
+	animation: roin 1s linear normal;
+}
+/*旋转进入*/
+@keyframes rotate{
+	from{
+		opacity: 0;
+		transform: scale(0);
+	}
+	to{
+		opacity: 0.7;
+		transform: scale(1);
+	}
+}
+/*从左向右移动动画A型-英文*/
+@keyframes lefta {
+    from{
+        transform: translateX(-90%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 0.8;
+    }
+}
+@keyframes righta {
+    from{
+        transform: translateX(90%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 0.8;
+    }
+}
+/*从左向右移动动画普通型*/
+@keyframes left {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/*隐藏显示动画*/
+@keyframes aniOp {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*从右向左移动动画普通型*/
+@keyframes right {
+    0%{
+        transform: translateX(100%);
+    }
+    50%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes rightA {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*top*/
+@keyframes top {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/*混合动画A:放大改为缩小出现*/
+@keyframes FlashA {
+    from{
+        transform: scale(25);
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/*混合动画B:向左移动并旋转*/
+@keyframes FlashB {
+    from{
+        transform:translateX(-100%) rotate(0deg);
+    }
+    to{
+        transform:translateX(0) rotate(-360deg);
+        opacity: 1;
+    }
+}
+/*混合动画B:向右移动并旋转*/
+@keyframes FlashC {
+    from{
+        transform:translateX(100%) rotate(0deg);
+    }
+    to{
+        transform:translateX(0) rotate(360deg);
+        opacity: 1;
+    }
+}
